@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("To-do list")
 
-if "taskS" not in st.session_state:
+if "tasks" not in st.session_state:
   st.session_state.tasks = []
 
 #Input information

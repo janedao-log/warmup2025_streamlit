@@ -26,6 +26,6 @@ for i, task in enumerate(st.session_state.tasks):
   with col2:
     if st.button("Delete", key=f"{i}"):
       st.session_state.tasks.pop(i)
-      st.return()
-  st.write(f"ID - {i}: Value - {task}")
+      # st.return()
+  # st.write(f"ID - {i}: Value - {task}")
 # st.write(f"Real Salary: {real_salary}")

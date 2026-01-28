@@ -23,6 +23,7 @@ if btn_form and new_task:
 
 for task in st.session_state.tasks:
     col1, col2 = st.columns([0.1, 0.9])
+    
     checkbox_key = f"done_{task['id']}"
 
     with col1:
@@ -34,4 +35,4 @@ for task in st.session_state.tasks:
 
     with col2:
         status = "✅" if task["done"] else "🙅‍♀️"
-        st.write(f"{status} {task["text"]}")
+        st.write(f"{status} {task['text']}")

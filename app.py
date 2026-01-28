@@ -13,4 +13,5 @@ if st.button("Add Task"):
   st.session_state.tasks.append(new_task)
 
 #Show output
-st.write("Tasks:", st.session_state.tasks)
+for i, task in enumerate(st.session_state.tasks):
+  st.write(f"ID - {i}: Value - {task}")

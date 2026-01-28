@@ -9,6 +9,7 @@ if "tasks" not in st.session_state:
 # new_task = st.text_input("New Task")
 Year = st.text_input("Năm Kinh Nghiệm")
 salary = st.number_input("Mức Lương", min_value=0, value=0)
+real_salary = 0
 
 #Processing
 if st.button("Add Info"):

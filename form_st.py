@@ -1,13 +1,13 @@
 import streamlit as st
 st.title("Basic To-do list")
 
-if 'task' not in st.session_state:
+if 'tasks' not in st.session_state:
     st.session_state.tasks = []
     st.session_state.next_id = 0
 
-    with st.form("add_form"):
-        new_task = st.text_input("New task")
-        btn_form = st.form_submit_button("Add")
+with st.form("add_form"):
+    new_task = st.text_input("New task")
+    btn_form = st.form_submit_button("Add")
 
 if btn_form and new_task:
     task = {

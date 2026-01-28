@@ -21,7 +21,7 @@ if btn_form and new_task:
     st.session_state.next_id += 1
     st.rerun()
 
-for task in st.session_state.tasks:
+for i, task in enumerate(st.session_state.tasks):
     col1, col2 = st.columns([0.1, 0.9])
     
     checkbox_key = f"done_{task['id']}"

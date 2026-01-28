@@ -15,7 +15,7 @@ if btn_form and new_task:
         "text": new_task,
         "done": False
     }
-    st.session_state.append(task)
+    st.session_state.tasks.append(task)
 
     st.session_state[f"done_{task['id']}"] = False
     st.session_state.next_id +=1

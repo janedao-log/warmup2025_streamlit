@@ -2,6 +2,8 @@ import streamlit as st
 
 st.title("To-do list")
 
+st.session_state.tasks = []
+
 task = []
 
 #Input information
@@ -9,7 +11,7 @@ new_task = st.text_input("New Task")
 
 #Processing
 if st.button("Add Task"):
-  task.append(new_task)
+  st.session_state.tasks.append(new_task)
 
 #Show output
 st.write("Tasks:", task)

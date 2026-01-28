@@ -3,7 +3,7 @@ st.title("Basic To-do list")
 
 if 'task' not in st.session_state:
     st.session_state.tasks = []
-    st.session_state.next_id = []
+    st.session_state.next_id = 0
 
 with st.form("add_form"):
     new_task = st.text_input("New task")
@@ -18,7 +18,7 @@ if btn_form and new_task:
     st.session_state.tasks.append(task)
 
     st.session_state[f"done_{task['id']}"] = False
-    st.session_state.next_id +=1
+    st.session_state.next_id += 1
     st.rerun()
 
 for task in st.session_state.tasks:
